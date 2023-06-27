@@ -1238,7 +1238,7 @@ video {
 }
 
 .grid-cols-timeline {
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto 1fr;
 }
 
 .flex-row {

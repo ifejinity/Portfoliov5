@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       gridTemplateColumns:{
         "about" : '1fr 2fr',
-        "timeline" : 'auto 1fr',
+        "timeline" : 'auto auto 1fr',
       },
       fontFamily:{
         "poppins" : ['Poppins', 'sans-serif'],
