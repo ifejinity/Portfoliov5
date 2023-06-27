@@ -14,8 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="flex flex-col items-center relative font-poppins">
+<body class="flex flex-col bg-white items-center relative font-poppins">
 
     <!-- side navbar -->
     <div class="fixed top-0 left-0 h-screen justify-center items-center flex-col w-[80px] gap-5 md:flex hidden">
@@ -29,12 +31,12 @@
                 <i class="bi bi-person-fill text-[24px] title"></i>
             </div>
         </a>
-        <a href="#about">
+        <a href="#skills">
             <div class="title-container hover:bg-gray-300 hover:text-black transition-colors duration-200">
                 <i class="bi bi-tools text-[24px] title"></i>
             </div>
         </a>
-        <a href="#about">
+        <a href="#education">
             <div class="title-container hover:bg-gray-300 hover:text-black transition-colors duration-200">
                 <i class="bi bi-briefcase-fill text-[24px] title"></i>
             </div>
@@ -55,8 +57,8 @@
                 <p class="md:text-[20px] sm:text-[18px] text-[16px] font-medium leading-[1.1]">I Am Passionate <span class="underline underline-offset-8 text-blue-500" typing-speed="100" typing-delay="1000" words="Web Developer, Web Designer"></span></p>
                 <p class="font-light text-[15px]">The namics of how users interact with interactive elements within a user interface flow chart based on container proportion.</p>
                 <div class="flex md:gap-5 mt-5 md:flex-row flex-col gap-0">
-                    <button class="w-[120px] bg-blue-500 text-white font-medium p-3 hover:bg-black transition-colors duration-700 text-[14px]">ABOUT</button>
-                    <button class="w-[120px] border-blue-500 border-2 font-medium p-3 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-700 text-[14px]">CONTACT</button>
+                    <a href="#about" class="w-[120px] text-center bg-blue-500 text-white font-medium p-3 hover:bg-black transition-colors duration-700 text-[14px]">ABOUT</a>
+                    <a href="#contact" class="w-[120px] text-center border-blue-500 border-2 font-medium p-3 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-700 text-[14px]">CONTACT</a>
                 </div>
             </div>
         </div>
@@ -87,7 +89,7 @@
                     </div>
                 </div>
                 <div class="lg:w-[55%]">
-                    <p class="text-[30px] font-[600] mb-[10px]">I'M Jeffrey Lonzanida</p>
+                    <p class="text-[30px] font-[600] mb-[10px] leading-[1.1]">I'M Jeffrey Lonzanida</p>
                     <p class="mb-[20px] text-[18px] font-[400]">An Aspiring <span class="text-blue-500">Web Developer</span> from the <span class="text-blue-500">Philippines</span></p>
                     <p class="text-[15px] text-gray-600 mb-[16px]">I am a graduating student from the University of Rizal System on the Degree of Bachelor of Science in Information Technology. Throughout my college journey, I maintained a consistent presence on the Dean's List, demonstrating my dedication to academic excellence. I am thrilled and eagerly awaiting the opportunity to receive my cum laude award. I’m very hard-working person, attentive, flexible, and computer literate. I'm very eager to learn new things</p>
                     <div class="flex 2xl:flex-row flex-col w-full 2xl:gap-2">
@@ -137,11 +139,147 @@
     </div>
 
     <!-- skills section -->
-    <div class="h-screen">
+    <div class="w-full flex justify-center" id="skills">
+        <div class="w-full max-w-[1440px] md:mx-[10%] mx-[5%] py-[100px]">
+            <div class="w-full flex flex-col gap-[10px] mb-[35px]">
+                <p class="text-[35px] font-bold leading-[1]" id="skills_sec">MY SKILLS</p>
+                <p class="bg-blue-500 h-[2px] w-[50px]"></p>
+                <p class="text-[14px] tracking-[2px] font-light">AN ASPIRING WEB DEVELOPER FROM THE PHILIPPINES</p>
+            </div>
+            <div class="grid md:grid-cols-6 sm:grid-cols-4 grid-cols-3">
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/html5.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/css.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/js.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/jquery.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/php.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/mysql.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/tailwind.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/daisyui.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/figma.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/ps.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/ai.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+                <div class="title-container min-w-[100px] min-h-[100px] hover:grayscale-0 transition-all duration-500 grayscale m-auto" data-aos="fade" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    <img src="./src/assets/skills/canva.png" alt="" srcset="" class="title w-[60%]">
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!--  education section -->
+    <div class="w-full flex justify-center bg-gray-200 overflow-hidden" id="education">
+        <div class="w-full max-w-[1440px] md:mx-[10%] mx-[5%] py-[100px]">
+            <div class="w-full flex flex-col gap-[10px] mb-[35px]">
+                <p class="text-[35px] font-bold leading-[1]" id="edu_sec">MY EDUCATION & EXPERIENCE</p>
+                <p class="bg-blue-500 h-[2px] w-[50px]"></p>
+                <p class="text-[14px] tracking-[2px] font-light">AN ASPIRING WEB DEVELOPER FROM THE PHILIPPINES</p>
+            </div>
+            <div class="flex md:flex-row flex-col gap-[15px]">
+                <div class="md:w-1/2">
+                    <p class="text-[18px] font-semibold mb-[20px]">Education</p>
+                    <div class="grid grid-cols-timeline gap-x-[15px]">
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
+                            <div class="w-[2px] h-full bg-blue-500 rounded-full pt-[3px]"></div>
+                        </div>
+                        <div class="mb-[15px]" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                            <p class="text-[16px] text-blue-500 font-medium">University of Rizal System</p>
+                            <p class="text-[14px] text-gray-600">Dean's List - (1st year - 4th year)</p>
+                            <p class="text-[14px] text-gray-600">Cum Laude Award(Class of 2023)</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
+                            <div class="w-[2px] h-full bg-blue-500 rounded-full pt-[3px]"></div>
+                        </div>
+                        <div class="mb-[15px]" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                            <p class="text-[16px] text-blue-500 font-medium">College of Arts and Sciences of Asia and the Pacific</p>
+                            <p class="text-[14px] text-gray-600">Ranked 1 - (Grade 11 - Grade 12)</p>
+                            <p class="text-[14px] text-gray-600">With Honor(S.Y. 2017 - 2018)</p>
+                            <p class="text-[14px] text-gray-600">Most Outstanding ICT Student(Class of 2019)</p>
+                            <p class="text-[14px] text-gray-600">With Honor(Class of 2019)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-[18px] font-semibold mb-[20px]">Work</p>
+                    <div class="grid grid-cols-timeline gap-x-[15px]">
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
+                            <div class="w-[2px] h-full bg-blue-500 rounded-full pt-[3px]"></div>
+                        </div>
+                        <div class="mb-[15px]" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                            <p class="text-[16px] text-blue-500 font-medium">TechnoPOS Computer Store(Internship 2023)</p>
+                            <p class="text-[14px] text-gray-600">Develop and Design a Website for affordaPOS</p>
+                            <p class="text-[14px] text-gray-600">Hardware Cleaning & Checking</p>
+                            <p class="text-[14px] text-gray-600">Point of Sale System(Quality Assurance)</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
+                            <div class="w-[2px] h-full bg-blue-500 rounded-full pt-[3px]"></div>
+                        </div>
+                        <div class="mb-[15px]" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                            <p class="text-[16px] text-blue-500 font-medium">Barbie Sweet Little Things Shop(May 2021 - December 2021)</p>
+                            <p class="text-[14px] text-gray-600">Sticker Layouting & Cutting using Sign Master</p>
+                            <p class="text-[14px] text-gray-600">Parcel Packing</p>
+                            <p class="text-[14px] text-gray-600">Order Management(Shopee & Lazada Seller Account)</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
+                            <div class="w-[2px] h-full bg-blue-500 rounded-full pt-[3px]"></div>
+                        </div>
+                        <div class="mb-[15px]" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                            <p class="text-[16px] text-blue-500 font-medium">College of Arts and Sciences of Asia and the Pacific(Internship 2019)</p>
+                            <p class="text-[14px] text-gray-600">Encoding of Students Grade in Form 137</p>
+                            <p class="text-[14px] text-gray-600">Poster Making</p>
+                            <p class="text-[14px] text-gray-600">Room Utilization System Development utilizing VB6 and Microsoft Access</p>
+                            <p class="text-[14px] text-gray-600">Sports Fest Documentation(2019)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact section -->
+    <div class="w-full flex justify-center" id="">
+        <div class="w-full max-w-[1440px] md:mx-[10%] mx-[5%] py-[100px]">
+            <div class="w-full flex flex-col gap-[10px] mb-[35px]">
+                <p class="text-[35px] font-bold leading-[1]" id="">MY CONTACTS</p>
+                <p class="bg-blue-500 h-[2px] w-[50px]"></p>
+                <p class="text-[14px] tracking-[2px] font-light">AN ASPIRING WEB DEVELOPER FROM THE PHILIPPINES</p>
+            </div>
+            <div class="grid grid-cols-5">
+                
+            </div>
+        </div>
     </div>
 
     <!-- script -->
     <script src="./index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

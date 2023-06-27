@@ -41,8 +41,7 @@ const titleContainers = document.querySelectorAll('.title-container')
 
 titleContainers.forEach(titleContainer => {
   const title = titleContainer.querySelector('.title');
-  const activeAfter = window.getComputedStyle(titleContainer,':before')
-  console.log(activeAfter)
+  const activeAfter = window.getComputedStyle(titleContainer,':before');
 
   titleContainer.addEventListener('mousemove', e => {
     const midWidth = titleContainer.clientWidth / 2
@@ -93,6 +92,24 @@ function navigation(){
         $(".title-container").eq(1).addClass('bg-blue-500 text-white');
         for(let i = 0; i <= 4; i++){
             if(i != 1){
+                $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
+            }
+        }
+    }
+
+    if (isInViewport($('#skills_sec')[0])) {
+        $(".title-container").eq(2).addClass('bg-blue-500 text-white');
+        for(let i = 0; i <= 4; i++){
+            if(i != 2){
+                $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
+            }
+        }
+    }
+
+    if (isInViewport($('#edu_sec')[0])) {
+        $(".title-container").eq(3).addClass('bg-blue-500 text-white');
+        for(let i = 0; i <= 4; i++){
+            if(i != 3){
                 $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
             }
         }
