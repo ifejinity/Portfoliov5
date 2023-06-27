@@ -81,7 +81,7 @@ $(window).on('load', function() {
 function navigation(){
     if (isInViewport($('#hero_sec')[0])) {
         $(".title-container").eq(0).addClass('bg-blue-500 text-white');
-        for(let i = 0; i <= 4; i++){
+        for(let i = 0; i <= 5; i++){
             if(i != 0){
                 $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
             }
@@ -90,7 +90,7 @@ function navigation(){
 
     if (isInViewport($('#about_sec')[0])) {
         $(".title-container").eq(1).addClass('bg-blue-500 text-white');
-        for(let i = 0; i <= 4; i++){
+        for(let i = 0; i <= 5; i++){
             if(i != 1){
                 $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
             }
@@ -99,7 +99,7 @@ function navigation(){
 
     if (isInViewport($('#skills_sec')[0])) {
         $(".title-container").eq(2).addClass('bg-blue-500 text-white');
-        for(let i = 0; i <= 4; i++){
+        for(let i = 0; i <= 5; i++){
             if(i != 2){
                 $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
             }
@@ -108,10 +108,47 @@ function navigation(){
 
     if (isInViewport($('#edu_sec')[0])) {
         $(".title-container").eq(3).addClass('bg-blue-500 text-white');
-        for(let i = 0; i <= 4; i++){
+        for(let i = 0; i <= 5; i++){
             if(i != 3){
                 $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
             }
         }
     }
+
+    if (isInViewport($('#works_sec')[0])) {
+        $(".title-container").eq(4).addClass('bg-blue-500 text-white');
+        for(let i = 0; i <= 5; i++){
+            if(i != 4){
+                $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
+            }
+        }
+    }
+}
+
+// projects
+const itemProjects = document.querySelectorAll("#project_item");
+const itemDescription = document.querySelectorAll("#project_description");
+const itemImage = document.querySelectorAll("#project_image");
+
+let child = $("#project_parent")
+let childCount =  child.children().length;
+
+for (let item of itemProjects){
+    item.addEventListener('mouseenter', function () {
+        for(let i = 0; i <= childCount; i++){
+            if(this == itemProjects[i]){
+                itemDescription[i].classList.replace('hidden', 'flex');
+                itemImage[i].classList.add('scale-[1.1]');
+            }
+        }
+    })
+
+    item.addEventListener('mouseleave', function () {
+        for(let i = 0; i <= childCount; i++){
+            if(this == itemProjects[i]){
+                itemDescription[i].classList.replace('flex',"hidden");
+                itemImage[i].classList.remove('scale-[1.1]');
+            }
+        }
+    })
 }

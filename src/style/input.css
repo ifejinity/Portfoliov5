@@ -57,3 +57,8 @@ a { text-decoration: none; }
   z-index: 1;
   transition: .2s ease-out;
 }
+
+/* projects */
+#project_description{
+  transition: 1s;
+}

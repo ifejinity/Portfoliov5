@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--  -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body class="flex flex-col bg-white items-center relative font-poppins">
 
@@ -41,7 +46,12 @@
                 <i class="bi bi-briefcase-fill text-[24px] title"></i>
             </div>
         </a>
-        <a href="#about">
+        <a href="#works">
+            <div class="title-container hover:bg-gray-300 hover:text-black transition-colors duration-200">
+                <i class="bi bi-collection-fill text-[24px] title"></i>
+            </div>
+        </a>
+        <a href="#contacts">
             <div class="title-container hover:bg-gray-300 hover:text-black transition-colors duration-200">
                 <i class="bi bi-person-rolodex text-[24px] title"></i>
             </div>
@@ -203,7 +213,7 @@
                             <div class="w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
                             <div class="w-[2px] h-full bg-blue-500 rounded-full pt-[3px]"></div>
                         </div>
-                        <div class="mb-[15px]" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                        <div class="mb-[15px]" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-mirror="true">
                             <p class="text-[16px] text-blue-500 font-medium">University of Rizal System(2019 - 2023)</p>
                             <p class="text-[14px] text-gray-600">Dean's List - (1st year - 4th year)</p>
                             <p class="text-[14px] text-gray-600">Cum Laude Award(Class of 2023)</p>
@@ -261,16 +271,33 @@
         </div>
     </div>
 
-    <!-- contact section -->
-    <div class="w-full flex justify-center" id="">
+    <!-- works section -->
+    <div class="w-full flex justify-center" id="works">
         <div class="w-full max-w-[1440px] md:mx-[10%] mx-[5%] py-[100px]">
             <div class="w-full flex flex-col gap-[10px] mb-[35px]">
-                <p class="text-[35px] font-bold leading-[1]" id="">MY CONTACTS</p>
+                <p class="text-[35px] font-bold leading-[1]" id="works_sec">MY WORKS</p>
                 <p class="bg-blue-500 h-[2px] w-[50px]"></p>
                 <p class="text-[14px] tracking-[2px] font-light">AN ASPIRING WEB DEVELOPER FROM THE PHILIPPINES</p>
             </div>
-            <div class="grid grid-cols-5">
-                
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]" id="project_parent">
+                <div class="w-full rounded-md m-auto relative overflow-clip cursor-pointer" id="project_item">
+                    <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center" id="project_description">
+                        <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">PROJECT 1</p>
+                    </div>
+                    <img src="./src/assets/project_placeholder.jpg" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+                </div>
+                <div class="w-full rounded-md m-auto relative overflow-clip cursor-pointer" id="project_item">
+                    <div class="w-full h-full bg-black/50 z-[1] absolute hidden justify-center items-center" id="project_description">
+                        <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">PROJECT 2</p>
+                    </div>
+                    <img src="./src/assets/project_placeholder.jpg" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+                </div>
+                <div class="w-full rounded-md m-auto relative overflow-clip cursor-pointer" id="project_item">
+                    <div class="w-full h-full bg-black/50 z-[1] absolute hidden justify-center items-center" id="project_description">
+                        <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">PROJECT 3</p>
+                    </div>
+                    <img src="./src/assets/project_placeholder.jpg" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+                </div>
             </div>
         </div>
     </div>
