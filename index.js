@@ -37,7 +37,8 @@ $(document).ready(function(){
     const works = [
         ['./src/assets/projects/bslts.png', 'BARBIE SWEET LITTLE THINGS SHOP', '', 'https://github.com/ifejinity/e-commerce-website-for-BSLTS-Prestashop-'],
         ['./src/assets/projects/affordapos.png', 'AFFORDAPOS', 'https://ifejinity.github.io/affordaPOS/', 'https://github.com/ifejinity/affordaPOS'],
-        ['./src/assets/projects/unichat.png', 'UNICHAT', 'https://universitychat.synergize.co/', 'https://github.com/ifejinity/UniversityChat']
+        ['./src/assets/projects/unichat.png', 'UNICHAT', 'https://universitychat.synergize.co/', 'https://github.com/ifejinity/UniversityChat'],
+        ['./src/assets/projects/whispersec.png', 'WHISPERSEC', 'https://whispersec.totalh.net/', 'https://github.com/ifejinity/WhisperSec']
     ];
 
     for (let i = 0; i < works.length; i++){
