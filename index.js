@@ -35,26 +35,38 @@ $(document).ready(function(){
     // myworks
     const myworksParent = document.querySelector("#project_parent");
     const works = [
-        ['./src/assets/project_placeholder.jpg', 'BARBIE SWEET LITTLE THINGS SHOP'],
-        ['./src/assets/project_placeholder.jpg', 'AFFORDAPOS'],
-        ['./src/assets/project_placeholder.jpg', 'UNICHAT']
+        ['./src/assets/projects/bslts.png', 'BARBIE SWEET LITTLE THINGS SHOP', '', 'https://github.com/ifejinity/e-commerce-website-for-BSLTS-Prestashop-'],
+        ['./src/assets/projects/affordapos.png', 'AFFORDAPOS', 'https://ifejinity.github.io/affordaPOS/', 'https://github.com/ifejinity/affordaPOS'],
+        ['./src/assets/projects/unichat.png', 'UNICHAT', 'https://universitychat.synergize.co/', 'https://github.com/ifejinity/UniversityChat']
     ];
 
     for (let i = 0; i < works.length; i++){
         const div = document.createElement('div');
         div.className = 'w-full rounded-md m-auto relative overflow-clip cursor-pointer';
         div.setAttribute('id', 'project_item');
-        
-       div.innerHTML = `
-        <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
-            <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works[i][1]}</p>
-            <div class="flex gap-3 text-white text-[14px]">
-                <a href="" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
-                <a href="" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">View <i class="bi bi-link-45deg text-[16px]"></i></a>
-            </div>
-        </div>
-        <img src="${works[i][0]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
-       `;
+        if(works[i][2] == ''){
+            div.innerHTML = `
+                <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
+                    <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works[i][1]}</p>
+                    <div class="flex gap-3 text-white text-[14px]">
+                        <a href="${works[i][3]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
+                    </div>
+                </div>
+                <img src="${works[i][0]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+            `;
+        }
+        else{
+            div.innerHTML = `
+                <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
+                    <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works[i][1]}</p>
+                    <div class="flex gap-3 text-white text-[14px]">
+                        <a href="${works[i][3]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
+                        <a href="${works[i][2]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">View <i class="bi bi-link-45deg text-[16px]"></i></a>
+                    </div>
+                </div>
+                <img src="${works[i][0]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+            `;
+        }
 
        myworksParent.appendChild(div);
     }
