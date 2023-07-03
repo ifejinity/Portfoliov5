@@ -148,54 +148,56 @@ $(document).ready(function(){
             './src/assets/projects/bslts.png', 
             './src/assets/projects/affordapos.png', 
             './src/assets/projects/unichat.png', 
-            './src/assets/projects/whispersec.png'
+            './src/assets/projects/whispersec.png',
+            './src/assets/projects/jumpninja.png'
         ],
         title: [
             'BARBIE SWEET LITTLE THINGS SHOP', 
             'AFFORDAPOS', 
             'UNICHAT', 
-            'WHISPERSEC'],
+            'WHISPERSEC',
+            'JUMP NINJA'
+        ],
         code: [
             'https://github.com/ifejinity/e-commerce-website-for-BSLTS-Prestashop-', 
             'https://github.com/ifejinity/affordaPOS', 
             'https://github.com/ifejinity/UniversityChat', 
-            'https://github.com/ifejinity/WhisperSec'
+            'https://github.com/ifejinity/WhisperSec',
+            'https://github.com/ifejinity/jump-ninja'
         ],
         view: [
-            '', 
+            , 
             'https://ifejinity.github.io/affordaPOS/', 
             'https://universitychat.synergize.co/', 
-            'https://whispersec.totalh.net/']
+            'https://whispersec.totalh.net/',
+            'https://drive.google.com/file/d/1V6kcqIPhMP_SS_xoxJy7aumWFi5DuRAs/view?usp=drive_link'
+        ]
     };
 
-    for (let i = 0; i < works.image.length; i++){
+    for (let i = 0; i < works.title.length; i++){
         const div = document.createElement('div');
         div.className = 'w-full rounded-md m-auto relative overflow-clip cursor-pointer';
         div.setAttribute('id', 'project_item');
-        if(works.view[i] == ''){
-            div.innerHTML = `
-                <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
-                    <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works.title[i]}</p>
-                    <div class="flex gap-3 text-white text-[14px]">
-                        <a href="${works.code[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
-                    </div>
-                </div>
-                <img src="${works.image[i]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
-            `;
+        let codeBtn = viewBtn = '';
+        // code button
+        if(works.code[i] != null){
+            codeBtn = ` <a href="${works.code[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>`;
         }
-        else{
-            div.innerHTML = `
-                <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
-                    <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works.title[i]}</p>
-                    <div class="flex gap-3 text-white text-[14px]">
-                        <a href="${works.code[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
-                        <a href="${works.view[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">View <i class="bi bi-link-45deg text-[16px]"></i></a>
-                    </div>
-                </div>
-                <img src="${works.image[i]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
-            `;
+        // view button
+        if(works.view[i] != null){
+            viewBtn = `<a href="${works.view[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">View <i class="bi bi-link-45deg text-[16px]"></i></a>`
         }
 
+        div.innerHTML = `
+            <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
+                <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works.title[i]}</p>
+                <div class="flex gap-3 text-white text-[14px]">
+                    ${codeBtn}
+                    ${viewBtn}
+                </div>
+            </div>
+            <img src="${works.image[i]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+        `;
        myworksParent.appendChild(div);
     }
 
