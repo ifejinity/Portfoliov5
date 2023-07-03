@@ -1,19 +1,128 @@
 $(document).ready(function(){
+    // education
+    const worksParent = document.querySelector("#works_parent");
+    const worksItem = {
+        technopos: {
+            companyName: ['TechnoPOS Computer Store(Internship 2023)'],
+            year: ['2023'],
+            job: [
+                "Develop and Design a Website for affordaPOS",
+                "Hardware Cleaning & Checking",
+                "Point of Sale System(Quality Assurance)"
+            ]
+        },
+        bslts: {
+            companyName: ['Barbie Sweet Little Things Shop(Part time)'],
+            year: ['2021'],
+            job: [
+                "Barbie Sweet Little Things Shop(May 2021 - December 2021)",
+                "Sticker Layouting & Cutting using Sign Master",
+                "Parcel Packing",
+                "Order Management(Shopee & Lazada Seller Account)"
+            ]
+        },
+        casap: {
+            companyName: ['College of Arts and Sciences of Asia and the Pacific(Internship 2019)'],
+            year: ['2019'],
+            job: [
+                "Encoding of Students Grade in Form 137",
+                "Poster Making",
+                "Room Utilization System Development utilizing VB6 and Microsoft Access",
+                "Sports Fest Documentation(2019)"
+            ]
+        }
+    };
+
+    for(let wor of Object.keys(worksItem)){
+        const yearParent = document.createElement('div');
+        yearParent.innerHTML = `
+            <p class="text-[14px] text-blue-500 font-medium">${worksItem[wor].year}</p>
+        `;
+        const timeLine = document.createElement('div');
+        timeLine.className = 'flex flex-col justify-center items-center';
+        timeLine.innerHTML = `
+            <div class="w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
+            <div class="w-[2px] h-full bg-blue-500 rounded-full pt-[3px]"></div>
+        `;
+        const awards = document.createElement('div');
+        awards.className = "mb-[15px]";
+        awards.setAttribute('data-aos', 'fade-left');
+        awards.setAttribute('data-aos-easing', 'ease-out-cubic');
+        awards.setAttribute('data-aos-duration', '1000');
+        awards.innerHTML = `<p class="text-[16px] text-blue-500 font-medium">${worksItem[wor].companyName}</p>`;
+        for(let job of Object.keys(worksItem[wor].job)){
+            awards.innerHTML += `<p class="text-[14px] text-gray-600">${worksItem[wor].job[job]}</p>`;
+        }
+
+        worksParent.appendChild(yearParent);
+        worksParent.appendChild(timeLine);
+        worksParent.appendChild(awards);
+    }
+
+    // education
+    const educationParent = document.querySelector("#education_parent");
+    const education = {
+        urs: {
+            schoolname: ['University of Rizal System'],
+            year: ['2019 - 2023'],
+            awards: [
+                "Dean's Lister(1st - 4th Year)", 
+                'Cum Laude Award'
+            ]
+        },
+        casap: {
+            schoolname: ['College of Arts and Sciences of Asia and the Pacific'],
+            year: ['2017 - 2019'],
+            awards: [
+                'Ranked 1 - (Grade 11 - Grade 12)', 
+                'With Honor(S.Y. 2017 - 2018)', 
+                'Most Outstanding ICT Student(Class of 2019)', 
+                'With Honor(Class of 2019)'
+            ]
+        }
+    };
+
+    for(let edu of Object.keys(education)){
+        const yearParent = document.createElement('div');
+        yearParent.innerHTML = `
+            <p class="text-[14px] text-blue-500 font-medium">${education[edu].year}</p>
+        `;
+        const timeLine = document.createElement('div');
+        timeLine.className = 'flex flex-col justify-center items-center';
+        timeLine.innerHTML = `
+            <div class="w-[10px] h-[10px] bg-blue-500 rounded-full"></div>
+            <div class="w-[2px] h-full bg-blue-500 rounded-full pt-[3px]"></div>
+        `;
+        const awards = document.createElement('div');
+        awards.className = "mb-[15px]";
+        awards.setAttribute('data-aos', 'fade-left');
+        awards.setAttribute('data-aos-easing', 'ease-out-cubic');
+        awards.setAttribute('data-aos-duration', '1000');
+        awards.innerHTML = `<p class="text-[16px] text-blue-500 font-medium">${education[edu].schoolname}</p>`;
+        for(let awardsItem of Object.keys(education[edu].awards)){
+            awards.innerHTML += `<p class="text-[14px] text-gray-600">${education[edu].awards[awardsItem]}</p>`;
+        }
+
+        educationParent.appendChild(yearParent);
+        educationParent.appendChild(timeLine);
+        educationParent.appendChild(awards);
+    }
+    
     // skills
     const parentDiv = document.querySelector("#skills_parent");
     const imageSources = [
-    './src/assets/skills/html5.png',
-    './src/assets/skills/css.png',
-    './src/assets/skills/js.png',
-    './src/assets/skills/jquery.png',
-    './src/assets/skills/php.png',
-    './src/assets/skills/mysql.png',
-    './src/assets/skills/tailwind.png',
-    './src/assets/skills/daisyui.png',
-    './src/assets/skills/figma.png',
-    './src/assets/skills/ps.png',
-    './src/assets/skills/ai.png',
-    './src/assets/skills/canva.png'
+        './src/assets/skills/html5.png',
+        './src/assets/skills/css.png',
+        './src/assets/skills/js.png',
+        './src/assets/skills/jquery.png',
+        './src/assets/skills/php.png',
+        './src/assets/skills/mysql.png',
+        './src/assets/skills/tailwind.png',
+        './src/assets/skills/daisyui.png',
+        './src/assets/skills/figma.png',
+        './src/assets/skills/ps.png',
+        './src/assets/skills/ai.png',
+        './src/assets/skills/canva.png'
     ];
 
     for (let i = 0; i < imageSources.length; i++) {
@@ -34,38 +143,56 @@ $(document).ready(function(){
 
     // myworks
     const myworksParent = document.querySelector("#project_parent");
-    const works = [
-        ['./src/assets/projects/bslts.png', 'BARBIE SWEET LITTLE THINGS SHOP', '', 'https://github.com/ifejinity/e-commerce-website-for-BSLTS-Prestashop-'],
-        ['./src/assets/projects/affordapos.png', 'AFFORDAPOS', 'https://ifejinity.github.io/affordaPOS/', 'https://github.com/ifejinity/affordaPOS'],
-        ['./src/assets/projects/unichat.png', 'UNICHAT', 'https://universitychat.synergize.co/', 'https://github.com/ifejinity/UniversityChat'],
-        ['./src/assets/projects/whispersec.png', 'WHISPERSEC', 'https://whispersec.totalh.net/', 'https://github.com/ifejinity/WhisperSec']
-    ];
+    const works = {
+        image: [
+            './src/assets/projects/bslts.png', 
+            './src/assets/projects/affordapos.png', 
+            './src/assets/projects/unichat.png', 
+            './src/assets/projects/whispersec.png'
+        ],
+        title: [
+            'BARBIE SWEET LITTLE THINGS SHOP', 
+            'AFFORDAPOS', 
+            'UNICHAT', 
+            'WHISPERSEC'],
+        code: [
+            'https://github.com/ifejinity/e-commerce-website-for-BSLTS-Prestashop-', 
+            'https://github.com/ifejinity/affordaPOS', 
+            'https://github.com/ifejinity/UniversityChat', 
+            'https://github.com/ifejinity/WhisperSec'
+        ],
+        view: [
+            '', 
+            'https://ifejinity.github.io/affordaPOS/', 
+            'https://universitychat.synergize.co/', 
+            'https://whispersec.totalh.net/']
+    };
 
-    for (let i = 0; i < works.length; i++){
+    for (let i = 0; i < works.image.length; i++){
         const div = document.createElement('div');
         div.className = 'w-full rounded-md m-auto relative overflow-clip cursor-pointer';
         div.setAttribute('id', 'project_item');
-        if(works[i][2] == ''){
+        if(works.view[i] == ''){
             div.innerHTML = `
                 <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
-                    <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works[i][1]}</p>
+                    <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works.title[i]}</p>
                     <div class="flex gap-3 text-white text-[14px]">
-                        <a href="${works[i][3]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
+                        <a href="${works.code[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
                     </div>
                 </div>
-                <img src="${works[i][0]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+                <img src="${works.image[i]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
             `;
         }
         else{
             div.innerHTML = `
                 <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
-                    <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works[i][1]}</p>
+                    <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works.title[i]}</p>
                     <div class="flex gap-3 text-white text-[14px]">
-                        <a href="${works[i][3]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
-                        <a href="${works[i][2]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">View <i class="bi bi-link-45deg text-[16px]"></i></a>
+                        <a href="${works.code[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>
+                        <a href="${works.view[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">View <i class="bi bi-link-45deg text-[16px]"></i></a>
                     </div>
                 </div>
-                <img src="${works[i][0]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+                <img src="${works.image[i]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
             `;
         }
 
