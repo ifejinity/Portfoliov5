@@ -181,11 +181,11 @@ $(document).ready(function(){
         let codeBtn = viewBtn = '';
         // code button
         if(works.code[i] != null){
-            codeBtn = ` <a href="${works.code[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">Code <i class="bi bi-github text-[16px]"></i></a>`;
+            codeBtn = ` <a href="${works.code[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500" target="_blank">Code <i class="bi bi-github text-[16px]"></i></a>`;
         }
         // view button
         if(works.view[i] != null){
-            viewBtn = `<a href="${works.view[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500">View <i class="bi bi-link-45deg text-[16px]"></i></a>`
+            viewBtn = `<a href="${works.view[i]}" class="rounded-full border-[1px] border-white py-1 px-2 hover:bg-white hover:text-black duration-500" target="_blank">View <i class="bi bi-link-45deg text-[16px]"></i></a>`
         }
 
         div.innerHTML = `
