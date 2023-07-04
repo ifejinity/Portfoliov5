@@ -198,9 +198,12 @@ $(document).ready(function(){
             </div>
             <img src="${works.image[i]}" alt="" srcset="" class="w-full h-full duration-300 transition-all" id="project_image">
         `;
-       myworksParent.appendChild(div);
+        myworksParent.appendChild(div);
     }
 
+    const sliceWorks = document.querySelectorAll("#project_item");
+    console.log(sliceWorks.length)
+    
     // type effect
     var wordsToType = document.querySelector("#hero-text span[words]").getAttribute("words").split(','), 
                 typer =  document.querySelector("#hero-text span[words]"), 

@@ -186,15 +186,16 @@
 
     <!-- works section -->
     <div class="w-full flex justify-center" id="works">
-        <div class="w-full max-w-[1440px] md:mx-[10%] mx-[5%] py-[100px]">
+        <div class="w-full max-w-[1440px] md:mx-[10%] mx-[5%] py-[100px] flex flex-col">
             <div class="w-full flex flex-col gap-[10px] mb-[35px]">
                 <p class="text-[35px] font-bold leading-[1]" id="works_sec">MY WORKS</p>
                 <p class="bg-blue-500 h-[2px] w-[50px]"></p>
                 <p class="text-[14px] tracking-[2px] font-light">AN ENTHUSIASTIC WEB DEVELOPER FROM THE PHILIPPINES</p>
             </div>
-            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]" id="project_parent">
+            <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px] mb-[35px]" id="project_parent">
                 <!-- works goes here -->
             </div>
+            <button class="self-end py-[10px] px-[20px] bg-blue-500 text-white hover:bg-black transition-colors duration-700 text-[14px] font-[500]">MORE WORKS</button>
         </div>
     </div>
 
@@ -208,7 +209,10 @@
             </div>
             <div class="flex lg:flex-row flex-col gap-[30px]">
                 <div class="lg:w-[65%] w-full">
-                    <div class="p-[5%] bg-white rounded-[5px] shadow-md flex flex-col">
+                    <div class="p-[5%] bg-white rounded-[5px] shadow-md flex flex-col relative overflow-clip">
+                        <div class="w-full h-full absolute top-0 left-0 bg-black/50 flex justify-center items-center text-white">
+                            <p class="text-[30px] font-[300]">Unavailable</p>
+                        </div>
                         <p class="text-[18px] mb-[20px] font-[600]">SAY SOMETHING</p>
                         <div class="flex md:flex-row flex-col md:gap-[30px]">
                             <input class="w-full py-[6px] pr-[12px] text-[14px] outline-none mb-[16px] border-b-[1px] border-b-gray-400 focus:border-b-blue-500 focus:border-b-2" type="text" name="" id="" placeholder="Name *">
@@ -256,7 +260,14 @@
     </div>
 
     <!-- footer -->
+    <div class="py-5 bg-gray-900 w-full flex justify-center items-center">
+        <div class="w-full max-w-[1440px] grid md:grid-cols-2 grid-cols-1 mx-[5%] md:mx-[10%]">
+            <div>
 
+            </div>
+            <p class="text-gray-400 text-[12px] md:text-right text-center">© 2023 copyright all right reserved</p>
+        </div>
+    </div>
     <!-- script -->
     <script src="./index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
