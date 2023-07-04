@@ -189,14 +189,14 @@ $(document).ready(function(){
         }
 
         div.innerHTML = `
-            <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-500 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
-                <p class="animate__fadeInLeft animate__bounceIn text-white md:text-[25px] text-[20px] font-bold">${works.title[i]}</p>
+            <div class="w-full h-full bg-black/50 z-[1] absolute hidden duration-300 transition-all justify-center items-center p-5 flex-col gap-3" id="project_description">
+                <p class="text-white md:text-[25px] text-[20px] font-bold">${works.title[i]}</p>
                 <div class="flex gap-3 text-white text-[14px]">
                     ${codeBtn}
                     ${viewBtn}
                 </div>
             </div>
-            <img src="${works.image[i]}" alt="" srcset="" class="w-full h-full duration-500 transition-all" id="project_image">
+            <img src="${works.image[i]}" alt="" srcset="" class="w-full h-full duration-300 transition-all" id="project_image">
         `;
        myworksParent.appendChild(div);
     }
@@ -322,6 +322,15 @@ $(document).ready(function(){
             $(".title-container").eq(4).addClass('bg-blue-500 text-white');
             for(let i = 0; i <= 5; i++){
                 if(i != 4){
+                    $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
+                }
+            }
+        }
+
+        if (isInViewport($('#contact_sec')[0])) {
+            $(".title-container").eq(5).addClass('bg-blue-500 text-white');
+            for(let i = 0; i <= 5; i++){
+                if(i != 5){
                     $(".title-container").eq(`${i}`).removeClass('bg-blue-500 text-white');
                 }
             }
