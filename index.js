@@ -176,7 +176,7 @@ $(document).ready(function(){
 
     for (let i = 0; i < works.title.length; i++){
         const div = document.createElement('div');
-        div.className = 'w-full rounded-md m-auto relative overflow-clip cursor-pointer';
+        div.className = 'w-full rounded-[5px] m-auto relative overflow-clip cursor-pointer';
         div.setAttribute('id', 'project_item');
         let codeBtn = viewBtn = '';
         // code button
