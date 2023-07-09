@@ -67,7 +67,8 @@ $(document).ready(function(){
             year: ['2019 - 2023'],
             awards: [
                 "Dean's Lister(1st - 4th Year)", 
-                'Cum Laude Award'
+                'Cum Laude Award',
+                '7th place - CCS Days Start-up Challenge 2023'
             ]
         },
         casap: {
