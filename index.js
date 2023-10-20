@@ -2,6 +2,13 @@ $(document).ready(function(){
     // education
     const worksParent = document.querySelector("#works_parent");
     const worksItem = {
+        acacia: {
+            companyName: ['Acaciasoft'],
+            year: ['2023 - present'],
+            job: [
+                "Software Development",
+            ]
+        },
         technopos: {
             companyName: ['TechnoPOS Computer Store(Internship 2023)'],
             year: ['2023'],
