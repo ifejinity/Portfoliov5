@@ -119,6 +119,9 @@ $(document).ready(function(){
     // skills
     const parentDiv = document.querySelector("#skills_parent");
     const imageSources = [
+        './src/assets/skills/laravel.png',
+        './src/assets/skills/vue.png',
+        './src/assets/skills/inertia.png',
         './src/assets/skills/html5.png',
         './src/assets/skills/css.png',
         './src/assets/skills/js.png',
