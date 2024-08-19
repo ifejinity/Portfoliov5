@@ -7,6 +7,8 @@ $(document).ready(function(){
             year: ['2023 - present'],
             job: [
                 "Software Development",
+                "Cloud Engineering",
+                "API Integration"
             ]
         },
         technopos: {
