@@ -213,9 +213,6 @@ $(document).ready(function(){
         `;
         myworksParent.appendChild(div);
     }
-
-    const sliceWorks = document.querySelectorAll("#project_item");
-    console.log(sliceWorks.length)
     
     // type effect
     var wordsToType = document.querySelector("#hero-text span[words]").getAttribute("words").split(','), 
