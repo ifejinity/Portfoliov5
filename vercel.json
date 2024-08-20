@@ -4,6 +4,10 @@
         "source": "/(.*)",
         "headers": [
           {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; script-src https://ajax.googleapis.com https://unpkg.com 'nonce-abc123' 'self'; style-src https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline' 'self'; img-src 'self' data: blob:;  font-src https://cdn.jsdelivr.net https://fonts.gstatic.com 'self'; connect-src 'self';"
+          },
+          {
             "key": "X-Frame-Options",
             "value": "SAMEORIGIN"
           },
