@@ -26,16 +26,21 @@
             'self';
         script-src 
             https://ajax.googleapis.com
+            https://unpkg.com
+            'nonce-abc123'
             'self'; 
         style-src 
+            https://unpkg.com
             https://cdn.jsdelivr.net 
             https://fonts.googleapis.com
+            'unsafe-inline'
             'self'; 
         img-src 
             'self' 
             data:
             blob:; 
         font-src 
+            https://cdn.jsdelivr.net
             https://fonts.gstatic.com
             'self'; 
         connect-src 
@@ -82,10 +87,10 @@
     <div class="w-full h-screen flex flex-row bg-cover md:bg-center bg-[75%_top] bg-no-repeat md:px-[10%] px-[5%] max-w-[1440px]" style="background-image: url(./src/assets/hero_bg_2.png);" id="hero">
         <div class="md:w-1/2 w-full flex flex-col justify-center">
             <div class="flex gap-5 flex-col md:p-0 p-5 md:bg-transparent bg-white/60" id="hero-text">
-                <p class="md:text-[18px] sm:text-[15px] text-[14px] font-medium leading-[1]">Hello there...</p>
-                <p class="sm:text-[60px] text-[35px] font-semibold leading-[1]" id="hero_sec">Jeffrey Lonzanida</p>
-                <p class="md:text-[20px] sm:text-[18px] text-[16px] font-medium leading-[1.1]">I Am Enthusiastic <span class="underline underline-offset-8 text-blue-500" typing-speed="100" typing-delay="1000" words="Sofware Developer"></span></p>
-                <p class="font-light text-[15px]">The namics of how users interact with interactive elements within a user interface flow chart based on container proportion.</p>
+                <h1 class="md:text-[18px] sm:text-[15px] text-[14px] font-medium leading-[1]">Hello there...</h1>
+                <h2 class="sm:text-[60px] text-[35px] font-semibold leading-[1]" id="hero_sec">Jeffrey Lonzanida</h2>
+                <h2 class="md:text-[20px] sm:text-[18px] text-[16px] font-medium leading-[1.1]">I Am Enthusiastic <span class="underline underline-offset-8 text-blue-500" typing-speed="100" typing-delay="1000" words="Sofware Developer"></span></h2>
+                <h3 class="font-light text-[15px]">The namics of how users interact with interactive elements within a user interface flow chart based on container proportion.</h3>
                 <div class="flex md:gap-5 mt-5 md:flex-row flex-col gap-0">
                     <a href="#about" class="w-[120px] text-center bg-blue-500 text-white font-medium p-3 hover:bg-black transition-colors duration-700 text-[14px]">ABOUT</a>
                     <a href="#contact" class="w-[120px] text-center border-blue-500 border-2 font-medium p-3 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-700 text-[14px]">CONTACT</a>
@@ -296,7 +301,7 @@
     <!-- script -->
     <script src="./index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
+    <script nonce="abc123">
         AOS.init();
     </script>
 </body>
